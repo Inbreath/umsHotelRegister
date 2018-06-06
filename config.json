@@ -1,0 +1,8 @@
+{
+    "packName": "com.ums.jyftest",
+    "apkName": "贾轶凡小程序demo",
+    "versionCode": "1",
+    "versionName": "1.0.1",
+    "icon": "timg.png",
+    "enter": "index.js"
+}
