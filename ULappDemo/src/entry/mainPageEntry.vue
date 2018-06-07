@@ -1,30 +1,63 @@
 <template>
   <div class="wrapper" @back='backMethod' append="tree">
-        <div class="btn-group" >
-          <div class="btn" @click="keep">
-            <text class = "btn-text">存件</text>
-          </div>
-          <div class="btn" @click="take">
-            <text class = "btn-text">取件</text>
-          </div>
+  <div style="position:relative; left:0px; background-color:#ffffff; height:736px; width:800;" ></div> 
+  
+  <div style="position:absolute; left:0px; top:0px; background-color:#a327eb; width:800px; height:140px"></div> 
+<!-- border-width: 5px; border-radius: 20px; -->
+  <div style="position:absolute; left:50px; top:0px; border-width: 2px; border-radius: 20px; border-color: #ccc; background-color:#ffffff; width:658px; height:736px" >
+     
+     <div class="btn-group" >
+              <div v-for="item in $store.state.keepImage" class="title" @click="keep">
+                  <img style='width:250; height:250;' :src="item.url"/>
+              </div>
+             <text class = "title">存件</text>
+                <div v-for="item in $store.state.takeImage" class="title" @click="take">
+                  <img style='width:250; height:250;' :src="item.url"/>
+              </div>
+
+          <text class = "title">取件</text>
         </div>
-       
-    
-        <div class="new-btn-group" >
-        <div class="new-btn" @click="start">
-            <text class = "new-btn-text">查看未取记录</text>
-          </div>
+    </div> 
+        <!-- <div class="new-btn-group" style="top:30px">
+              <div v-for="item in $store.state.recordImage" class="title" @click="start">
+                  <img style='width:660px; height:98px;' :src="item.url"/>
+              </div>
        </div>
        <div class="new-btn-group" >
-        <div class="new-btn" @click="course">
-            <text class = "new-btn-text">使用说明</text>
+              <div v-for="item in $store.state.usageImage"  @click="course">
+                  <img style='width:660px; height:98px;' :src="item.url"/>
+              </div>
+       </div>    -->
+        <div class="new-btn-group"  style="margin-top: 80px;" >
+        <div class="new-btn" @click="start" style="background-color:#a327eb;">
+            <text class = "new-btn-text" style="color:#ffffff">查看寄存记录</text>
           </div>
        </div>
-       <!-- <router-view class="view"></router-view> -->
+       <div class="new-btn-group" style="margin-top: 20px;">
+        <div class="new-btn" @click="course" style="background-color:#ffffff;">
+            <text class = "new-btn-text" style="color:#a327eb">使用说明</text>
+          </div>
+       </div>
   </div>
 </template>
 
 <style>
+  .food-item{
+    border-color: black;
+    border-width: 1px;
+    border-radius: 50px;
+    margin: 20px 20px 0 20px;
+    padding:0 15px 0 15px;
+  }
+    .title {
+    flex-direction: row;
+    align-items:center;
+  }
+
+.bg-image{
+  width: 240px;
+  height: 240px;
+}
 .new-item{
      padding-left: 20px;
      align-items: center;
@@ -35,25 +68,27 @@
     justify-content: center;
   }
   .new-btn{
-    width: 600px;
-    height: 150px;
+    width: 660px;
+    height: 98px;
     justify-content: center;
     align-items: center;
-    padding: 20px 40px;
-    margin-top: 100px;
+    /* padding: 20px 40px;
+    margin-top: 50px; */
     
-    border-radius: 10px;
-    border-width:4px;
-    border-color: #ccc;
+    border-radius: 50px;
+    border-width:3px;
+    border-color: #a327eb;
     border-style: solid ; 
   }
   .new-btn-group{
     justify-content: center;
-
     flex-direction: row;
   }
   .btn-group{
-    flex-direction: row;
+    height: 736px;
+    width: 658px;
+    
+    align-items: center;
     justify-content: center;
   }
   .btn{
@@ -61,10 +96,11 @@
     height: 240px;
     align-items: center;
     justify-content: center;
-    padding: 40px;
+    padding: 20px;
     margin-top: 100px;
     margin-left: 40px;
     margin-right: 40px;
+    background-color: white;
     
     border-radius: 120px;
     border-width:4px;
@@ -109,6 +145,7 @@
     },
     data: {
       index:1,
+      imgUrl:'./static/keep.png'
     },
     methods:{
       leftClick() {

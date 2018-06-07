@@ -1,7 +1,7 @@
 <template>
 <div class="wrapper"  append="tree">
 <ums-header
-      title="存取行李" 
+      title="行李取件" 
       background-color = #a327eb
       height= "150px"
       class="header">

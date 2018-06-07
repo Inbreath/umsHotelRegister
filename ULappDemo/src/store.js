@@ -25,6 +25,30 @@ export default {
                 check: false
             }
         ],
+        keepImage:[{
+            label: '存',
+            value: '001',
+            url: require('./static/keep.png'),
+            price: 298
+        }],
+        takeImage:[{
+            label: '取',
+            value: '001',
+            url: require('./static/take.png'),
+            price: 298
+        }],
+        recordImage:[{
+            label: '记录',
+            value: '001',
+            url: require('./static/btn_nor.png'),
+            price: 298
+        }],
+        usageImage:[{
+            label: '记录',
+            value: '001',
+            url: require('./static/btn_nor_1.png'),
+            price: 298
+        }],
         allFoods: [{
             label: '1分钱测试',
             value: '000',
@@ -33,7 +57,7 @@ export default {
         },{
             label: '东菱牛排',
             value: '001',
-            url: require('./static/001.jpg'),
+            url: require('./static/keep.png'),
             price: 298
         },
         {

@@ -3,19 +3,19 @@
     <div class="wrapper" append="tree">
         <ums-header
                 title="存件记录"
-                height="94px"
+                height= "150px"
                 @onLeftPartClick="leftClick"
                 @onRightPartClick="rightClick"
                 class="header"
                 backgroundColor="#a327eb">
-        <text slot="right" style="height:40px;width:100px;"@click="select">{{righttext}}</text>
+        <!-- <text slot="right" style="height:40px;width:100px;"@click="select">{{righttext}}</text> -->
         </ums-header>
-        <div class="color-title">
+        <!-- <div class="color-title">
             <div class="order-item-title">
                 <text class="title-text">编号</text>
                 <text class="title-text">姓名</text>
                 <text class="title-text">更多</text>
-            </div>
+            </div> -->
             <scroller>
                 <div v-for="item in this.textqurry" :key="item" class="order-item">
                     <text class="text-no2">{{ item.deposit_id}}</text>
