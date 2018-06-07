@@ -49,6 +49,13 @@ export default {
             url: require('./static/btn_nor_1.png'),
             price: 298
         }],
+        searchImage:[{
+            label: '查询',
+            value: '001',
+            url: require('./static/search.png'),
+            price: 298
+        }],
+
         allFoods: [{
             label: '1分钱测试',
             value: '000',

@@ -10,12 +10,26 @@
                 backgroundColor="#a327eb">
         <!-- <text slot="right" style="height:40px;width:100px;"@click="select">{{righttext}}</text> -->
         </ums-header>
-        <!-- <div class="color-title">
-            <div class="order-item-title">
-                <text class="title-text">编号</text>
-                <text class="title-text">姓名</text>
-                <text class="title-text">更多</text>
-            </div> -->
+        <div style="position:relative; left:0px; background-color:#fff; height:100px; width:800;" ></div> 
+        <div style="position:absolute; left:0px; top:140px; background-color:#a327eb; height:60px; width:800px;"></div>
+        <div style="position:absolute; left:50px; top:140px; border-width: 2px; border-radius: 20px; border-color: #000; background-color:#ffffff; width:660px; height:100px" >
+        
+        <div style="position:relative; left:0px; background-color:#ffffff; height:100px; width:660;" ></div> 
+        <div style="position:absolute; left: 0px; top:25px; width:100px; height: 100px;">
+                  <image style="left: 20px; width:50px; height: 50px;" src="./static/search.png"></image>
+        </div>
+
+        <div style="position:absolute; left:110px; top:0px; width:250px; height: 100px;">
+                  <input style=" width:250px; height: 100px;" placeholder="请输入查询内容！" autofocus=false />
+        </div>
+
+        <div style="position:absolute; left:520px; top:25px; width:100px; height: 100px;"  >
+                 <text style="width:100px; height: 100px; font-size:50px; color:#a327eb;" @click="keep" >查询</text>
+        </div>      
+        </div> 
+
+         <div style="position:relative; left:0px; top:32px; background-color:#000; height:850px; width:660;" ></div> 
+        	
             <scroller>
                 <div v-for="item in this.textqurry" :key="item" class="order-item">
                     <text class="text-no2">{{ item.deposit_id}}</text>
@@ -34,6 +48,32 @@
     </div>
 </template>
 <style>
+.bg{
+    /* position: absolute; */
+    top:  25px;
+    bottom: 0;
+    width:100px;
+    height: 100px;
+}
+.bg-image{
+    width:50px;
+    height: 50px;
+}
+.new-btn-text{
+    color: #a327eb;    
+    justify-content: center;
+  }
+  .btn-group{
+    height: 80px;
+    width: 80px;
+    
+    align-items: center;
+    justify-content: center;
+  }
+.title {
+    flex-direction: row;
+    align-items:center;
+  }
     .wrapper {
         align-items: center;
         /*justify-content: center;*/

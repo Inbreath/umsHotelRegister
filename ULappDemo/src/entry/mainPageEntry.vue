@@ -14,7 +14,6 @@
                 <div v-for="item in $store.state.takeImage" class="title" @click="take">
                   <img style='width:250; height:250;' :src="item.url"/>
               </div>
-
           <text class = "title">取件</text>
         </div>
     </div> 
