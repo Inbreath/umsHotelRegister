@@ -1,7 +1,7 @@
 <template>
-  <div class="wrapper" @back='backMethod' append="tree" background-color = #ccc>
+  <div class="wrapper" @back='backMethod' append="tree">
     <ums-header
-      title="设置" 
+      title="使用说明-存件" 
       background-color = #a327eb
       height= "150px"
       @onLeftPartClick="leftClick"
@@ -9,26 +9,33 @@
       </ums-header>
 
 
- <div class="new-item"  style='height:200' >
-   <image style='width:500; height:117' src="./logo.png"></image>
+ <div class="new-btn-group" >
+ <div class="console" style="height:900;">
+   <scroller>
+        <div class="new-item-group">
+          <text class="title-text" >存件流程:</text>
+          <text class="title-text" >1.点击主界面的存件按钮，系统会进入到拍照页面，然后用POS机对要存物品进行拍照
+          </text>
+          <text class="title-text" >2.拍完照后会到浏览的页面，用于确认刚才拍的照片，如果不满意，则点击重新拍照，如果满意，点击保存
+          </text>
+          <text class="title-text" >3.保存后会到选择验证方式的页面，该方式用于之后取件的时候进行验证，验证方式目前有3种，分别是身份证，手机号，和银行卡。身份证只需要刷一下就好，手机号需要填入，银行卡需要进行余额查询，所以需要顾客输入密码，用于验证身份。
+          </text>
+          <text class="title-text" >4.填完验证方式后，会调到补充信息的部分，填入顾客的姓名，手机号，和备注。姓名和手机号可用于不能完成验证的情况下确认身份，备注则可以填入寄存物品的简单描述（如：5瓶葡萄酒）。
+          </text>
+          <text class="title-text" >5.全部完成后，点击确认，会跳到存件结果的页面，通知是否存件成功，并且打印出2张存件的小票，一张交给顾客，另一张可以和存件放到一起，方便取件
+          </text>
+        </div>
+        </scroller>
 </div>
- <div class="new-item"  style='height:100' >
-   <text>版本号 1.0.0</text>
-   </div>
-   <div style="position:relative; background-color:#e0e0e0; height:100px; top:50px; border-width: 2px;  border-color: #ccc; " >
-         <div style="position:absolute; left:20; width:400px; height:100px; justify-content: center; " > 版本说明</div>
-          <div style="position:absolute; left:650px; width:100px; height:100px; justify-content: center;" >
-                   <image style='width:20px; height:30px; left:40px; justify-content: center; ' src="./static/ic_arr.png"></image>
-         </div>
-    </div>    
+</div>
 
-     <div style="position:relative; background-color:#e0e0e0; height:100px; top:50px" >
-         <div style="position:absolute; left:20; width:400px; height:100px; justify-content: center; " > 版本更新</div>
-          <div style="position:absolute; left:650px; width:100px; height:100px; justify-content: center;" >
-                   <image style='width:20px; height:30px; left:40px; justify-content: center; ' src="./static/ic_arr.png"></image>
-         </div>
-    </div>
 
+   <div class="new-btn-group" >
+          <div class="btn" @click="nextpage">
+            <text class = "btn-text">下一页</text>
+          </div>
+ </div>
+    
   </div>
 </template>
 
@@ -57,12 +64,11 @@
     justify-content: center;
   }
 .new-item{
-     margin-top: 20px;
      align-items: center;
      justify-content: center;
    }
 .new-btn-text{
-    color: #ccc;    
+    color: #ffffff;    
     justify-content: center;
   }
   .new-btn{
